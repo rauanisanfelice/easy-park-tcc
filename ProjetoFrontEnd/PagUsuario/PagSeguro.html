@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../res/css/style.css" rel="stylesheet" />
+    <link href="../res/css/bootstrap.css" rel="stylesheet" />
+
+
+
+
+</head>
+<body style="height:600px">
+    <div class="container-fluid">
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-4 center-block centralizar text-center">
+                <label> Comprar R$05,00 de Crédito</label>
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="code" value="0D8926DCD8D812E774289F9FE771B7B2" />
+                    <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-comprar-azul.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                </form>
+                <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js">
+                    PagSeguroLightbox({
+                        code: '1F69A3CF7878ED9994B3DF9DDC706796'
+                    }, {
+                        success: function (transactionCode) {
+                            alert("success - " + transactionCode);
+                        },
+                        abort: function () {
+                            alert("abort");
+                        }
+                    });
+                    if (!isOpenLightbox) {
+                        location.href = "http://localhost:35192/PagUsuario/Compra.aspx?code=" + code;
+                    }
+                </script>
+                <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+            <div class="col-md-4 center-block centralizar text-center">
+                <label> Comprar R$10,00 de Crédito</label>
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="code" value="655185138484446BB4934FA14C228695" />
+                    <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-comprar-azul.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                </form>
+                <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+                <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+            <div class="col-md-4 center-block centralizar text-center">
+                <label> Comprar R$20,00 de Crédito</label>
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="code" value="86DF11C0F3F3D561143CDF9B9E5CD8FF" />
+                    <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-comprar-azul.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                </form>
+                <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+                <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../res/js/jquery-1.11.3.min.js"></script>
+    <script src="../res/js/bootstrap.min.js"></script>
+</body>
+</html>
